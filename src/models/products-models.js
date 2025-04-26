@@ -1,6 +1,6 @@
 const { default: mongoose, Types } = require("mongoose");
 
-const ProductSchema = mongoose.Schema(
+const productSchema = mongoose.Schema(
   {
     name: {
       type: String,
@@ -16,3 +16,7 @@ const ProductSchema = mongoose.Schema(
   },
   { timestamps: true }
 );
+
+const Product = mongoose.model("Products", productSchema);
+
+module.exports = { Product };
